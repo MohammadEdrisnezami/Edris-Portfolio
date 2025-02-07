@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <!-- متاتگ‌های SEO -->
+    <title>M.Edris- Web Developer & Designer</title>
+    <meta name="description" content="app.description, Professional web developer and designer specializing in modern web applications">
+    <meta name="keywords" content="web developer, web designer, frontend developer, UI/UX designer, portfolio">
+    <meta name="author" content="M.Edris">
+    
+    <!-- Open Graph متاتگ‌های -->
+    <meta property="og:title" content="M.Edris - Web Developer & Designer">
+    <meta property="og:description" content="Professional web developer and designer specializing in modern web applications.">
+    <meta property="og:image" content="https://yoursite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    
+    <!-- Twitter Card متاتگ‌های -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="M.Edris - Web Developer & Designer">
+    <meta name="twitter:description" content="Professional web developer and designer specializing in modern web applications.">
+    <meta name="twitter:image" content="https://yoursite.com/images/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- کنونیکال لینک -->
+    <link rel="canonical" href="{{ url()->current() }}">
+    
+    <!-- Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- اضافه کردن preload برای فایل‌های مهم -->
+    <link rel="preload" href="js/main.js" as="script">
+</head>
+<body>
+<header class="header">
+    <div class="logo">M.Edris<span>.</span></div>
+    <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
+            <li class="nav-item"><a href="services.html" class="{{ request()->routeIs('services') ? 'active' : '' }}">Services</a></li>
+            <li class="nav-item"><a href="resume.html" class="{{ request()->routeIs('resume') ? 'active' : '' }}">Resume</a></li>
+            <li class="nav-item"><a href="work.html" class="{{ request()->routeIs('work') ? 'active' : '' }}">Work</a></li>
+            <li class="nav-item"><a href="contact.html" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
+            <li class="nav-item"><a href="hire.html" class="hire-button">Hire me</a></li>
+        </ul>
+    </nav>
+</header>   
+<main class="hire-page">
+    <section class="hire-hero">
+        <div class="section-header">
+            <span class="subtitle">Work With Me</span>
+            <h1 class="title">Let's Create Something Amazing</h1>
+            <p class="description">Choose the package that best suits your needs</p>
+        </div>
+    </section>
+
+    <section class="pricing-section">
+        <div class="pricing-grid">
+            <!-- Basic Package -->
+            <div class="pricing-card">
+                <div class="package-header">
+                    <h3>Basic Package</h3>
+                    <div class="price">
+                        <span class="amount">$499</span>
+                        <span class="period">/project</span>
+                    </div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Single Page Website</li>
+                    <li><i class="fas fa-check"></i> Responsive Design</li>
+                    <li><i class="fas fa-check"></i> 3 Revisions</li>
+                    <li><i class="fas fa-check"></i> Basic SEO</li>
+                    <li><i class="fas fa-check"></i> 5 Days Delivery</li>
+                </ul>
+                <a href="contact.html" class="select-plan-btn">Get Started</a>
+            </div>
+
+            <!-- Standard Package -->
+            <div class="pricing-card featured">
+                <div class="package-header">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Standard Package</h3>
+                    <div class="price">
+                        <span class="amount">$999</span>
+                        <span class="period">/project</span>
+                    </div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> Multi-Page Website</li>
+                    <li><i class="fas fa-check"></i> Responsive Design</li>
+                    <li><i class="fas fa-check"></i> 5 Revisions</li>
+                    <li><i class="fas fa-check"></i> Advanced SEO</li>
+                    <li><i class="fas fa-check"></i> 10 Days Delivery</li>
+                    <li><i class="fas fa-check"></i> Custom Features</li>
+                </ul>
+                <a href="contact.html" class="select-plan-btn">Get Started</a>
+            </div>
+
+            <!-- Premium Package -->
+            <div class="pricing-card">
+                <div class="package-header">
+                    <h3>Premium Package</h3>
+                    <div class="price">
+                        <span class="amount">$1999</span>
+                        <span class="period">/project</span>
+                    </div>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fas fa-check"></i> E-commerce Website</li>
+                    <li><i class="fas fa-check"></i> Responsive Design</li>
+                    <li><i class="fas fa-check"></i> Unlimited Revisions</li>
+                    <li><i class="fas fa-check"></i> Premium SEO</li>
+                    <li><i class="fas fa-check"></i> 15 Days Delivery</li>
+                    <li><i class="fas fa-check"></i> Advanced Features</li>
+                    <li><i class="fas fa-check"></i> Priority Support</li>
+                </ul>
+                <a href="contact.html" class="select-plan-btn">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="why-choose-section">
+        <div class="section-header">
+            <h2>Why Choose Me</h2>
+            <p>Here's what makes working with me different</p>
+        </div>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <i class="fas fa-clock"></i>
+                <h3>Fast Delivery</h3>
+                <p>Quick turnaround time without compromising quality</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-comments"></i>
+                <h3>Clear Communication</h3>
+                <p>Regular updates and transparent communication</p>
+            </div>
+            <div class="benefit-card">
+                <i class="fas fa-medal"></i>
+                <h3>Quality Work</h3>
+                <p>High-quality code and modern design standards</p>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- دکمه تغییر تم - خارج از div#app -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="تغییر تم">
+    <i class="fas fa-moon"></i>
+</button>
+
+<!-- Scripts -->
+
+<script src="js/app.js"></script>
+<script src="js/script.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // اطمینان از لود شدن کامل صفحه
+    window.addEventListener('load', function() {
+        if (typeof toggleTheme === 'undefined') {
+            console.error('Theme toggle function not loaded');
+        }
+    });
+</script>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-social">
+              
+            </div>
+            <p class="copyright">All Rights Reserved &copy; <span id="year"></span>  M.Edris</p>
+        </div>
+    </div> <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</footer> 

@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <!-- متاتگ‌های SEO -->
+    <title>M.Edris- Web Developer & Designer</title>
+    <meta name="description" content="app.description, Professional web developer and designer specializing in modern web applications">
+    <meta name="keywords" content="web developer, web designer, frontend developer, UI/UX designer, portfolio">
+    <meta name="author" content="M.Edris">
+    
+    <!-- Open Graph متاتگ‌های -->
+    <meta property="og:title" content="M.Edris - Web Developer & Designer">
+    <meta property="og:description" content="Professional web developer and designer specializing in modern web applications.">
+    <meta property="og:image" content="https://yoursite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    
+    <!-- Twitter Card متاتگ‌های -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="M.Edris - Web Developer & Designer">
+    <meta name="twitter:description" content="Professional web developer and designer specializing in modern web applications.">
+    <meta name="twitter:image" content="https://yoursite.com/images/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- کنونیکال لینک -->
+    <link rel="canonical" href="{{ url()->current() }}">
+    
+    <!-- Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- اضافه کردن preload برای فایل‌های مهم -->
+    <link rel="preload" href="js/main.js" as="script">
+</head>
+<body>
+<header class="header">
+    <div class="logo">M.Edris<span>.</span></div>
+    <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
+            <li class="nav-item"><a href="services.html" class="{{ request()->routeIs('services') ? 'active' : '' }}">Services</a></li>
+            <li class="nav-item"><a href="resume.html" class="{{ request()->routeIs('resume') ? 'active' : '' }}">Resume</a></li>
+            <li class="nav-item"><a href="work.html" class="{{ request()->routeIs('work') ? 'active' : '' }}">Work</a></li>
+            <li class="nav-item"><a href="contact.html" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
+            <li class="nav-item"><a href="hire.html" class="hire-button">Hire me</a></li>
+        </ul>
+    </nav>
+</header>   
+
+<main class="resume-page">
+        <section class="resume-hero">
+            <div class="section-header">
+                <span class="subtitle">Resume</span>
+                <h1 class="title">My Experience</h1>
+                <p class="description">A summary of my education and work experience</p>
+            </div>
+        </section>
+
+        <section class="resume-content">
+            <div class="resume-grid">
+                <!-- Education Section -->
+                <div class="resume-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        Education
+                    </h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="date">2020 - 2022</span>
+                            <h3>Master's in Computer Science</h3>
+                            <p class="institution">Stanford University</p>
+                            <p class="description">Specialized in Web Technologies and Software Engineering</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="date">2016 - 2020</span>
+                            <h3>Bachelor's in Software Engineering</h3>
+                            <p class="institution">MIT</p>
+                            <p class="description">Focus on Programming and System Design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="resume-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-briefcase"></i>
+                        Experience
+                    </h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="date">2022 - Present</span>
+                            <h3>Senior Web Developer</h3>
+                            <p class="institution">Google</p>
+                            <p class="description">Leading web development projects and mentoring junior developers</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="date">2020 - 2022</span>
+                            <h3>Full Stack Developer</h3>
+                            <p class="institution">Facebook</p>
+                            <p class="description">Developed and maintained large-scale web applications</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="date">2018 - 2020</span>
+                            <h3>Frontend Developer</h3>
+                            <p class="institution">Amazon</p>
+                            <p class="description">Created responsive and interactive user interfaces</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="resume-section skills-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-code"></i>
+                        Skills
+                    </h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Bootstrap</span>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Laravel</span>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Download CV Button -->
+            <div class="resume-cta">
+                <a href="#" class="download-cv">
+                    <i class="fas fa-download"></i>
+                    Download CV
+                </a>
+            </div>
+        </section>
+    </main>
+<!-- دکمه تغییر تم - خارج از div#app -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="تغییر تم">
+    <i class="fas fa-moon"></i>
+</button>
+
+<!-- Scripts -->
+
+<script src="js/app.js"></script>
+<script src="js/script.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // اطمینان از لود شدن کامل صفحه
+    window.addEventListener('load', function() {
+        if (typeof toggleTheme === 'undefined') {
+            console.error('Theme toggle function not loaded');
+        }
+    });
+    </script>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-social">
+              
+            </div>
+            <p class="copyright">All Rights Reserved &copy; <span id="year"></span>  M.Edris</p>
+        </div>
+    </div>
+     <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</footer> 

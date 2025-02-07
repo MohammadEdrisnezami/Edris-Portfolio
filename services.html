@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    
+    <!-- متاتگ‌های SEO -->
+    <title>M.Edris- Web Developer & Designer</title>
+    <meta name="description" content="app.description, Professional web developer and designer specializing in modern web applications">
+    <meta name="keywords" content="web developer, web designer, frontend developer, UI/UX designer, portfolio">
+    <meta name="author" content="M.Edris">
+    
+    <!-- Open Graph متاتگ‌های -->
+    <meta property="og:title" content="M.Edris - Web Developer & Designer">
+    <meta property="og:description" content="Professional web developer and designer specializing in modern web applications.">
+    <meta property="og:image" content="https://yoursite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+    
+    <!-- Twitter Card متاتگ‌های -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="M.Edris - Web Developer & Designer">
+    <meta name="twitter:description" content="Professional web developer and designer specializing in modern web applications.">
+    <meta name="twitter:image" content="https://yoursite.com/images/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    
+    <!-- کنونیکال لینک -->
+    <link rel="canonical" href="{{ url()->current() }}">
+    
+    <!-- Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- اضافه کردن preload برای فایل‌های مهم -->
+    <link rel="preload" href="js/main.js" as="script">
+</head>
+<body>
+<header class="header">
+    <div class="logo">M.Edris<span>.</span></div>
+    <div class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li class="nav-item"><a href="index.html" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
+            <li class="nav-item"><a href="services.html" class="{{ request()->routeIs('services') ? 'active' : '' }}">Services</a></li>
+            <li class="nav-item"><a href="resume.html" class="{{ request()->routeIs('resume') ? 'active' : '' }}">Resume</a></li>
+            <li class="nav-item"><a href="work.html" class="{{ request()->routeIs('work') ? 'active' : '' }}">Work</a></li>
+            <li class="nav-item"><a href="contact.html" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
+            <li class="nav-item"><a href="hire.html" class="hire-button">Hire me</a></li>
+        </ul>
+    </nav>
+</header>   
+
+<main class="services-page">
+        <section class="services-hero">
+            <div class="section-header">
+                <span class="subtitle">What I Do</span>
+                <h1 class="title">My Services</h1>
+                <p class="description">I offer comprehensive web development solutions tailored to your needs</p>
+            </div>
+        </section>
+
+        <section class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Custom web development with modern technologies and best practices for optimal performance.</p>
+                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Creating responsive websites that work seamlessly across all devices and screen sizes.</p>
+                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend Development</h3>
+                <p>Building robust server-side applications and APIs using modern frameworks and databases.</p>
+                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Database Design</h3>
+                <p>Designing and optimizing database structures for efficient data management and retrieval.</p>
+                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-sync"></i>
+                </div>
+                <h3>API Integration</h3>
+                <p>Seamlessly integrating third-party APIs and services into web applications.</p>
+                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Maintenance & Support</h3>
+                <p>Providing ongoing maintenance and technical support for web applications.</p>
+                <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+    </main>
+
+<!-- دکمه تغییر تم - خارج از div#app -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="تغییر تم">
+    <i class="fas fa-moon"></i>
+</button>
+
+<!-- Scripts -->
+
+<script src="js/app.js"></script>
+<script src="js/script.js"></script>
+<script src="js/main.js"></script>
+<script>
+    // اطمینان از لود شدن کامل صفحه
+    window.addEventListener('load', function() {
+        if (typeof toggleTheme === 'undefined') {
+            console.error('Theme toggle function not loaded');
+        }
+    });
+</script>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-social">
+              
+            </div>
+            <p class="copyright">All Rights Reserved &copy; <span id="year"></span>  M.Edris</p>
+        </div>
+    </div> <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</footer> 

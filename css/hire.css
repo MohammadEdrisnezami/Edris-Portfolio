@@ -1,0 +1,107 @@
+/* استایل‌های فرم */
+.hire-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.hire-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.hire-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #444;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #0056b3;
+}
+
+/* استایل‌های ریسپانسیو */
+@media (max-width: 768px) {
+    .hire-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+    
+    .hire-title {
+        font-size: 1.5rem;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+/* استایل‌های اعتبارسنجی */
+.form-group input:invalid,
+.form-group textarea:invalid {
+    border-color: #dc3545;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+/* انیمیشن‌ها */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hire-container {
+    animation: fadeIn 0.5s ease-out;
+} 

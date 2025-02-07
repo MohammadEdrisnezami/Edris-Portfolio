@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- متاتگ‌های SEO -->
+    <title>M.Edris- Web Developer & Designer</title>
+    <meta name="description"
+        content="app.description, Professional web developer and designer specializing in modern web applications">
+    <meta name="keywords" content="web developer, web designer, frontend developer, UI/UX designer, portfolio">
+    <meta name="author" content="M.Edris">
+
+    <!-- Open Graph متاتگ‌های -->
+    <meta property="og:title" content="M.Edris - Web Developer & Designer">
+    <meta property="og:description"
+        content="Professional web developer and designer specializing in modern web applications.">
+    <meta property="og:image" content="https://yoursite.com/images/og-image.jpg">
+    <meta property="og:url" content="https://yoursite.com">
+
+    <!-- Twitter Card متاتگ‌های -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="M.Edris - Web Developer & Designer">
+    <meta name="twitter:description"
+        content="Professional web developer and designer specializing in modern web applications.">
+    <meta name="twitter:image" content="https://yoursite.com/images/twitter-card.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- کنونیکال لینک -->
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- اضافه کردن preload برای فایل‌های مهم -->
+    <link rel="preload" href="js/main.js" as="script">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">M.Edris<span>.</span></div>
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li class="nav-item"><a href="index.html"
+                        class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
+                <li class="nav-item"><a href="services.html"
+                        class="{{ request()->routeIs('services') ? 'active' : '' }}">Services</a></li>
+                <li class="nav-item"><a href="resume.html"
+                        class="{{ request()->routeIs('resume') ? 'active' : '' }}">Resume</a></li>
+                <li class="nav-item"><a href="work.html"
+                        class="{{ request()->routeIs('work') ? 'active' : '' }}">Work</a></li>
+                <li class="nav-item"><a href="contact.html"
+                        class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
+                <li class="nav-item"><a href="hire.html" class="hire-button">Hire me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="work-page">
+        <section class="work-hero">
+            <div class="section-header">
+                <span class="subtitle">Portfolio</span>
+                <h1 class="title">Latest Works</h1>
+                <p class="description">Check out some of my featured projects</p>
+            </div>
+        </section>
+
+        <section class="work-content">
+            <!-- Filter Buttons -->
+            <div class="work-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Design</button>
+                <button class="filter-btn" data-filter="app">App Development</button>
+                <button class="filter-btn" data-filter="ui">UI/UX</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="work-grid">
+                <!-- Project 1 -->
+                <div class="work-item" data-category="web">
+                    <div class="work-image">
+                        <img src="images/dashboard.png" alt="E-commerce Website">
+                        <div class="work-overlay">
+                            <div class="work-info">
+                                <h3>VISA Database</h3>
+                                <p>Web Development</p>
+                                <a href="#" class="work-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="work-item" data-category="web">
+                    <div class="work-image">
+                        <img src="images/portofilo (2).png" alt="E-commerce Website">
+                        <div class="work-overlay">
+                            <div class="work-info">
+                                <h3>Portfolio</h3>
+                                <p>Web Development</p>
+                                <a href="#" class="work-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="work-item" data-category="web">
+                    <div class="work-image">
+                        <img src="images/dormitory.png" alt="E-commerce Website">
+                        <div class="work-overlay">
+                            <div class="work-info">
+                                <h3>Dormitory</h3>
+                                <p>Web Development</p>
+                                <a href="#" class="work-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="work-item" data-category="app">
+                    <div class="work-image">
+                        <img src="images/aaas.jfif" alt="Mobile App">
+                        <div class="work-overlay">
+                            <div class="work-info">
+                                <h3>Fitness Tracker App</h3>
+                                <p>App Development</p>
+                                <a href="#" class="work-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="work-item" data-category="ui">
+                    <div class="work-image">
+                        <img src="images/bbb.jfif" alt="UI Design">
+                        <div class="work-overlay">
+                            <div class="work-info">
+                                <h3>Dashboard Design</h3>
+                                <p>UI/UX Design</p>
+                                <a href="#" class="work-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+    </main>
+    <!-- دکمه تغییر تم - خارج از div#app -->
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="تغییر تم">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Scripts -->
+
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // اطمینان از لود شدن کامل صفحه
+        window.addEventListener('load', function () {
+            if (typeof toggleTheme === 'undefined') {
+                console.error('Theme toggle function not loaded');
+            }
+        });
+    </script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+
+                </div>
+                <p class="copyright">All Rights Reserved &copy; <span id="year"></span> M.Edris</p>
+            </div>
+        </div>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
