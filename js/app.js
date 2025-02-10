@@ -81,12 +81,12 @@ function updateThemeIcon(theme) {
 }
 
 // غیرفعال کردن Service Worker اگر وجود داشته باشد
-if ('serviceWorker' in navigator) {
+/*if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(registrations) {
         for(let registration of registrations) {
             registration.unregister();
         }
     });
 }
-
+*/
 // Add any custom JavaScript functions here
