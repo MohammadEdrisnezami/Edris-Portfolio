@@ -1773,6 +1773,9 @@ main {
     main {
         padding-top: 10px; /* تنظیم فاصله برای موبایل */
     }
+    .hero-image{
+        margin-top: 50px !important;
+    }
 } 
 .hero-section{
     margin-top: 4%;
